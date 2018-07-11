@@ -64,3 +64,45 @@ because the above two syntax are statements not expressions and for conditions u
 Global objects that shipped with engine will work line `Math` and `Date` but attempting use user defined global objects are not recommended
 
 ##### Directives
+
+Directives are special attributes with `v-` prefix `(example: v-bind, v-for)`
+
+Value of the Directive attibute should be a single javascript expressions except `v-for`
+
+>Example
+
+```
+<p v-if='seen'></p>
+```
+
+**Arguments**
+
+Some directives can take argument `(format: v-bind:attrName="expression")`
+
+>Example
+
+```<a v-bind:href="getUrl"></a>```
+
+Here in the above example, it is told to Vue that it should bind the return value of `getUrl` function to href attribute.
+
+Another directive is `v-on`, here it takes event that it should listen for and the function that should be called.
+
+>Example
+
+```<button v-on:click="callFun"></button>```
+
+**Modifiers**
+
+>WIP
+
+**ShortHands**
+
+Instead of using `v-bind:attr='expression'`, you can use `:attr='expression'`
+
+Instead of using `v-on:eventName='expression'`, you can use `@eventName='expression'`
+
+>Examples
+
+```<a :href="getUrl"></a>```
+
+```<button @click="doSomething"></button>```
