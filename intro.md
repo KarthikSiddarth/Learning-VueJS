@@ -1,4 +1,4 @@
-### What is Vue ?
+### What is VueJS ?
   VueJS is a JavaScript library, used for building user interfaces, it focuses on view layer of the application.
 
 ### Declarative rendering:
