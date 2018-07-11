@@ -1,1 +1,1 @@
-This repo is for sharing notes and snippets create in the process of learning VueJS
+This repo is for sharing notes and snippets created while learning VueJS
