@@ -1,8 +1,9 @@
-### Class Binding
+## Class Binding
 
-##### Binding HTML Classes
+### Binding HTML Classes
 
 **Object Syntax**
+
 Using Vue directive `v-bind`, we can toggle classe in an element based on its boolean value
 
 >Example
@@ -74,4 +75,38 @@ computed: {
 }
 ```
 
+### Array Syntax
 
+We can pass an array to `v-bind:class` to apply to a list of classes
+
+>Example
+
+>In HTML
+```
+<div v-bind:class="[activeClass, fontClass]"></div>
+```
+>In Vue Instance
+```
+data: {
+  activeClass: active
+  fontClass: font
+}
+```
+>This will render
+```
+<div class="active font"></div>
+```
+
+Array syntax provide facility to toggle classes conditionally
+
+>Example
+```
+<div v-bind:class="[isActive ? activeClass:fontClass]"></div>
+```
+In the above example, if the `isActive` value is true, the value of the `activeClass` property will be added to the class attribute else the value of `fontClass` property will be added to the class attribute.
+
+
+It is also possible to use Object syntax in Array syntax
+>Example
+```
+<div v-bind:calss="[{active: isActive}, fontClass]"></div>
