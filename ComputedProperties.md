@@ -65,3 +65,37 @@ In above example, whenever the `now` is referenced, it will return the already c
 
 Computed properties can also be used to set values to properties but by default computed properties are getter
 
+So when a computed properties changes, the properties that computed property is depend upon can be changed using computed properties setter property.
+
+>Example
+
+>In HTML
+```
+<div id="app">
+  <p>{{ fullname }}</p>
+</div>
+```
+>In Vue Instance
+```
+const app = new Vue({
+  el: '#app',
+  data: {
+    firstname: "albert"
+    secondname: "einstein"
+  },
+  computed: {
+    fullname: {
+      get: function () {
+        return `${this.firstname} ${this.lastname}`
+      },
+      set: function (val) {
+        val = val.split(' ')
+        this.firstname = val[0]
+        this.lastname = val[val.length-1]
+      }
+    }
+  }
+})
+```
+
+The above example will set first name and last name property to new value if the user provide a new value to fullname property `app.fullname = "nikola tesla"`
