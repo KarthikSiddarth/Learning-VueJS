@@ -60,5 +60,8 @@ computed: {
 ```
 In above example, whenever the `now` is referenced, it will return the already computed value and it won't change because it does not depend on any other values.
 
-**Computed vs Watched Property**
+
+**Computed Setter**
+
+Computed properties can also be used to set values to properties but by default computed properties are getter
 
