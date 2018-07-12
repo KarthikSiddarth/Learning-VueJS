@@ -69,8 +69,8 @@ data: {
 
 **Auto Prefixing**
 
-Notes yet to be added
+>*Notes yet to be added*
 
 **Mutiple values**
 
-Notes yet to be added
+>*Notes yet to be added*
