@@ -45,3 +45,32 @@ computed: {
   }
 }
 ```
+
+**Array Syntax**
+
+Array syntax allows to bind mutiple style objects to the same element
+>Example
+> In HTML 
+```
+<div v-bind:style="[fontStyles, bgStyles]"></div>
+```
+>In Vue instance
+```
+data: {
+  fontStyle: {
+    color: 'red',
+    'font-size': '50px'
+  },
+  bgStyles: {
+    backgroundColor: 'green'
+  }
+}
+```
+
+**Auto Prefixing**
+
+Notes yet to be added
+
+**Mutiple values**
+
+Notes yet to be added
